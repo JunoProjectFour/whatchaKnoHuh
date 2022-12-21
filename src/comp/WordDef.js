@@ -8,6 +8,9 @@ const WordDef = ({ wordDef, triggerReRender }) => {
   const keyMatt = '27lonz8iuunssx6o3uadbmcjgcyja363kgwsvbkxoqdada30f'
 
   const [responseDef, setResponseDef] = useState('');
+  const parseDef = /<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g;
+
+  // console.log(string);
 
   useEffect(() => {
     let word = wordDef
@@ -27,8 +30,9 @@ const WordDef = ({ wordDef, triggerReRender }) => {
 
       let definition = response.data
       definition.find((defText) => {
-        setResponseDef(defText.text);
-        return defText.text
+        let parseString = (defText.text).replace(parseDef, '');
+        setResponseDef(parseString);
+        // return defText.text
       })
 
     })
@@ -40,7 +44,8 @@ const WordDef = ({ wordDef, triggerReRender }) => {
 
   return (
     <div>
-      <p>{responseDef}</p>
+      <p>{responseDef}
+        {console.log(responseDef)}</p>
     </div>
   )
 }
