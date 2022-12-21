@@ -1,0 +1,60 @@
+.FormPage h2 {
+  padding-top: 100px;
+}
+
+.FormPage .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LeaderForm{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.LeaderForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LeaderForm p {
+  margin: 0;
+}
+
+.LeaderForm form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px #6056f9 solid;
+  text-align: center;
+  height: 50px;
+  margin: 50px;
+}
+
+.LeaderForm form input:focus {
+  outline: none;
+}
+
+.LeaderForm form .userNameInputButton {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 0px;
+  background-color: #6056f6;
+  padding: 10px 30px;
+  border: 2px solid #6056f6;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #cfff31;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* .LeaderForm form .userNameInputButton:hover,
+.LeaderForm form .userNameInputButton:focus {
+  font-size: 1.1rem;
+} */

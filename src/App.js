@@ -1,11 +1,13 @@
 import './App.css'
 import './HomeStyles.css'
+import './LeaderFormStyles.css'
 import './GamePage.css'
 
 import { Link, Routes, Route, } from 'react-router-dom';
 import GamePage from './Routes/GamePage.js';
 import Leaderboard from './Routes/Leaderboard.js';
 import Credits from './Routes/Credits.js';
+import LeaderBoardFormPage from './Routes/LeaderBoardFormPage';
 
 import ErrorPage from './Routes/ErrorPage.js';
 import Home from './Routes/Home';
@@ -32,6 +34,11 @@ function App() {
           </nav>
         </header>
       </div>
+        <footer>
+          Juno College is epic
+        </footer>
+
+
 
 
       <Routes>
@@ -40,6 +47,7 @@ function App() {
 
         <Route path="/GamePage" element={<GamePage />} />
         <Route path="/leaderboard" element={<Leaderboard />}></Route>
+        <Route  path="/leaderboardforum" element={ <LeaderBoardFormPage />}/>
 
         <Route path="/credits/" element={<Credits />} />
 

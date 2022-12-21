@@ -75,9 +75,12 @@ footer {
     text-align: center;
     margin-top: 212px;
     padding: 10px;
-    border-top: black 2px solid ;
+    /* border-top: black 2px solid ; */
     background-color: #6056f6;
     font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 .flex {
     display: flex;

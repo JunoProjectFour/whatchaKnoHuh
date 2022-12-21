@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import useRandom from "../hooks/useRandom";
+import getRandom from "../hooks/getRandom";
 import WordDef from "./WordDef";
 import TrueOrFalseButton from "./TrueOrFalseButton";
 
@@ -18,14 +18,12 @@ const FetchCall = () => {
     // const [oneWord, setOneWord] = useState('');
 
 
-
     //this var selects random word from the hook
-    let randomWord = useRandom();
-
+    
     useEffect (() => {
         
+        let randomWord  = getRandom();
         console.log(randomWord);
-        let randomResult = randomWord
 
         // console.log(randomResult);
     
@@ -35,7 +33,7 @@ const FetchCall = () => {
             method: "GET",
             dataResponse: "json",
             params: {
-                rel_hom: randomResult,
+                rel_hom: randomWord,
                 max: 1,
             }
         }).then((response) => {
@@ -52,7 +50,7 @@ const FetchCall = () => {
             }
             else {
 
-                const twoWords = [similarSound[0].word, randomResult];
+                const twoWords = [similarSound[0].word, randomWord];
                 console.log(twoWords);
                 
                 const wordChoice = (twoWords[Math.floor(Math.random() * twoWords.length)]);
@@ -75,8 +73,7 @@ const FetchCall = () => {
         <div className="fetch">
             <div className="question">
                 <h2>Definition</h2>
-                {/* <p>{responseDef}</p> */}
-                <WordDef wordDef ={wordDef} triggerReRender={triggerReRender}/>
+                <WordDef wordDef ={wordDef} triggerReRender={triggerReRender} setTriggerReRender={setTriggerReRender}/>
             </div>
             <TrueOrFalseButton
              triggerReRender={triggerReRender}

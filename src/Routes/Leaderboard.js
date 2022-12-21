@@ -1,13 +1,15 @@
-import { Outlet } from 'react-router-dom'
 import LeaderboardDisplay from '../comp/LeaderboardDisplay';
+import '../LeaderBoard.css'
 
 const Leaderboard = () => {
     return (
-        <div>
+        <div className='wrapper leaderboardContainer'>
             <h2>The best of the best!</h2>
-            <Outlet />
+            {/* <Outlet /> */}
             <div className="topScores">
-                <LeaderboardDisplay />
+                <ul className='leaderBoardUl'>
+                    <LeaderboardDisplay />
+                </ul>
             </div>
         </div>
     )
