@@ -8,7 +8,7 @@ const WordDef = ({ wordDef, triggerReRender, setTriggerReRender }) => {
   // const keyMatt = '27lonz8iuunssx6o3uadbmcjgcyja363kgwsvbkxoqdada30f'
 
   const [responseDef, setResponseDef] = useState('');
-  const parseDef = /<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g; 
+  const parseDef = /<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g;
 
   // To prevent useEffect on page mount
   const isFirstRender = useRef(true)
@@ -33,7 +33,7 @@ const WordDef = ({ wordDef, triggerReRender, setTriggerReRender }) => {
         console.log(response)
         let definition = response.data
         definition.find((defText) => {
-          if (defText.text === 0){
+          if (defText.text === 0) {
             setTriggerReRender(!triggerReRender)
           }
           else {
@@ -52,7 +52,8 @@ const WordDef = ({ wordDef, triggerReRender, setTriggerReRender }) => {
 
   return (
     <div>
-      <p>{responseDef}</p>
+      <p>{responseDef}
+        {console.log(responseDef)}</p>
     </div>
   )
 }
