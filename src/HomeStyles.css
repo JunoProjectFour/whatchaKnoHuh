@@ -1,5 +1,6 @@
 html {
-    background-color: #e3f4f3;
+    background: linear-gradient(0deg, hsla(54, 100%, 81%, 1) 0%, hsla(294, 100%, 88%, 1) 100%);
+    /* background: linear-gradient(0deg, hsla(333, 37%, 46%, 1) 0%, hsla(0, 0%, 0%, 1) 100%); */
     height: 100vh;
 }
 .page {
@@ -72,20 +73,26 @@ p {
     border: 2px solid #6056f6;
     border-radius: 10px;
     margin-top: 10px;
-    color: #cfff31;
+    color: #FFF59C;
     font-weight: bold;
+    font-family: 'Bubblegum Sans', cursive;
+
 }
 
 .play:hover,
 .play:focus {
     cursor: pointer;
-    transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: #cfff31;
-    color: #6056f6;
 }
 
 .btnDiv {
     height: 70px;
+}
+
+span {
+    font-family: 'Bubblegum Sans', cursive;
+        color: #6056f6;
+
+
+
 }
 
