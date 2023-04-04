@@ -53,10 +53,11 @@ h1 {
 .howToFlex {
     display: flex;
     flex-direction: column;
-    margin-top: 180px;
+    margin: 180px auto;
     border: 2px solid #6056f6;
     border-radius: 15px;
     height:fit-content;
+    width: fit-content;
 }
 
 p {
