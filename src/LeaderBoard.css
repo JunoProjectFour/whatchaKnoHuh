@@ -18,6 +18,9 @@ html { box-sizing: border-box;}
     width: 70%;
     margin: 0 auto;
     margin-top: 50px;
+    
+
+
 }
 
 .leaderBoardLi {
@@ -28,16 +31,24 @@ html { box-sizing: border-box;}
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 2px;
+    border: 2px solid #6056f9;
+    border-radius: 10px;
+
 }
 
 
 .leaderBoardLi:nth-child(odd) {
-    background-color: #6056f9;
-    color: #cfff31;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #6056f9;
+    background-color: hsla(54, 100%, 81%, 1);
 }
 .leaderBoardLi:nth-child(even) {
-    background-color: #cfff31;
     color: #6056f9;
+    background-color: hsla(294, 100%, 88%, 1);
+    border-radius: 10px;
+    margin-bottom: 5px;
+
 }
 
 .leaderBoardLi {

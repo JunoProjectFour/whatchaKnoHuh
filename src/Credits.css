@@ -21,9 +21,15 @@
     display: flex;
     justify-content: left;
 }
+img {
+    border-radius: 10px;
+
+}
 
 .creditsTeamLi {
-    box-shadow: 0 4px 8px 0 #cfff31;
+    border: 2px solid #6056f9;
+    border-radius: 10px;
+    padding: 5px;
     margin: 0 6px;
     padding-bottom: 15px;
     display: flex;
@@ -38,6 +44,8 @@
 
 .creditsTeamLi a {
     font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .creditBio {
