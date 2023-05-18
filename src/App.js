@@ -33,7 +33,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/GamePage" element={<GamePage />} />
+        <Route path="/GamePage/*" element={<GamePage />} />
         <Route path="/leaderboard" element={<Leaderboard />}></Route>
         <Route  path="/leaderboardforum" element={ <LeaderBoardFormPage />}/>
         <Route path="/credits/" element={<Credits />} />

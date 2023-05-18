@@ -2,9 +2,15 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 const WordDef = ({ wordDef, setWordDef }) => {
-  const keyRadojko = 'cb0kpdqhzyzmlou550ldukoadiyayyvp5607r0qnhpxxo85fb'
-  // const keyMatt = '27lonz8iuunssx6o3uadbmcjgcyja363kgwsvbkxoqdada30f'
 
+  const keyRadojko = 'cb0kpdqhzyzmlou550ldukoadiyayyvp5607r0qnhpxxo85fb'
+  const keyMatt = '27lonz8iuunssx6o3uadbmcjgcyja363kgwsvbkxoqdada30f'
+
+  const apiKeyList = [keyRadojko, keyMatt]
+  const [currentApiKeyIndex, setCurrentApiKeyIndex] = useState(0);
+  const [apiCallCounter,setApiCallCounter] = useState(0);
+  const currentApiKey = apiKeyList[currentApiKeyIndex]
+  
   const [responseDef, setResponseDef] = useState('');
   
   useEffect(() => {
@@ -24,7 +30,7 @@ const WordDef = ({ wordDef, setWordDef }) => {
         params: {
           word: word,
           limit: 10,
-          api_key: keyRadojko
+          api_key: currentApiKey
         }
       }).then((response) => {
         let arrayOfDefinitions = response.data
@@ -42,6 +48,14 @@ const WordDef = ({ wordDef, setWordDef }) => {
           let parseString = stupidName.replace(parseDef, '')
           setResponseDef(parseString)
         }
+
+        setApiCallCounter((counter) => counter + 1);
+
+        if (apiCallCounter >= 100 && currentApiKeyIndex < apiKeyList.length - 1) {
+          setCurrentApiKeyIndex((index) => index + 1);
+          setApiCallCounter(0)
+        }
+
       })
     }
   }, [wordDef, setWordDef])
